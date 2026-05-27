@@ -1,0 +1,10 @@
+[project]
+name = "alerting-grafana"
+version = "0.1.0"
+description = "Hands-On 4 IPBD - Real-Time Financial Monitoring with FastAPI & Grafana Alerting"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+]

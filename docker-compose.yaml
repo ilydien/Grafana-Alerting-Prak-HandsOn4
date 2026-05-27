@@ -1,0 +1,23 @@
+services:
+  backend:
+    image: python:3.11-slim
+    container_name: fastapi-backend
+    ports:
+      - "8000:8000"
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: >
+      sh -c "pip install --no-cache-dir fastapi uvicorn && uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_INSTALL_PLUGINS=yesoreyeram-infinity-datasource
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - backend
