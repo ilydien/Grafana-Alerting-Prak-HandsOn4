@@ -1,4 +1,4 @@
-# Online Store Financial Monitoring - FastAPI & Grafana Alerting
+# FastAPI & Grafana Alerting
 
 Tugas Hands-On 4 IPBD — Sistem pemantauan finansial real-time untuk toko online menggunakan **FastAPI** sebagai backend API dan **Grafana + Infinity plugin** sebagai platform monitoring dan alerting.
 
